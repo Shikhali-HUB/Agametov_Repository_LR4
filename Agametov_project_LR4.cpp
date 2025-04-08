@@ -57,7 +57,8 @@ void enterN(){
 }
 
 void enterfirstX(){
-
+  int first = X / 100;
+  cout << "first digit X: " << first << endl;
 }
 
 void enterNX(){
@@ -73,6 +74,7 @@ int main(){
     map<int,MenuItem>menu= {
         {1,{"x",enterX}},
         {2,{"n",enterN}},
+        {3,{"first digit x",enterfirstX}},
     };
     int choice = 0;
 
