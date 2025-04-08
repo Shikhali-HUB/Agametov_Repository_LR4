@@ -47,7 +47,7 @@ void enterX(){
 void enterN(){
   while (true) {
   EnterNumber(N,"enter number n (less than X, i.e. 1 to 3): ")();
-  if (N >= 1 && N < 3) {
+  if (N >= 1 && N < 100) {
     cout << "N:" << N <<endl;
     break;
   }else{
@@ -62,7 +62,16 @@ void enterfirstX(){
 }
 
 void enterNX(){
-
+  int n,n2;
+  EnterNumber(n2, "type what number you wanna find: ")();
+  if (n2 == 1) {
+      n = X % 10; 
+  } else if (n2 == 2) {
+      n = (X / 10) % 10;
+  } else if (n2 == 3) {
+      n = X / 100; 
+  }
+  cout << n2 << "-th digit of x: " << n << endl;
 }
 
 struct MenuItem{
@@ -75,6 +84,7 @@ int main(){
         {1,{"x",enterX}},
         {2,{"n",enterN}},
         {3,{"first digit x",enterfirstX}},
+        {4,{"find n-th digit of X",enterNX}},
     };
     int choice = 0;
 
