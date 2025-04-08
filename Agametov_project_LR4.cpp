@@ -20,7 +20,7 @@ void enterfirstX(){
 }
 
 void enterNX(){
-    
+
 }
 bool UserInput(string input) {
     if (input.empty())
@@ -65,8 +65,7 @@ int main(){
             cout << "Task " <<item.first <<". " << item.second.title <<endl;
         }
         cout << "0. Выход" << endl;
-        cout << "Введите номер пункта: ";
-        cin >> choice;
+        EnterNumber(choice,"Введите номер пункта: ")();
         if (choice == 0 ){
             cout << "@ 2025 FirstName LastName" <<endl;
             break;
