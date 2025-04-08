@@ -8,7 +8,8 @@ using namespace std;
 int N,X;
 
 void enterX(){
-
+  EnterNumber(X,"Введите число x: ")();
+  cout << "X: " << X << endl;
 }
 
 void enterN(){
